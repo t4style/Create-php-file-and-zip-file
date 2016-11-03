@@ -1,21 +1,15 @@
 # Create-php-file-and-zip-file
-PHP create a php file  and add zip archive created file.
+PHP Create zip file and including php file on zip.
 
-Getting Class
+Fully use 
+
 $class = New zip();
-
-Executing function 
-
-$execute = $class->execute("zipfilename","phpfilename","optional value");
-
-Getting error message
-
 try{
-if($execute == true){
-echo "..";
-
+  $calistir = $class->execute("testzip1","exampledirectory/testname","testpassword");
+  if($calistir == TRUE){
+    echo 'Dosya Oluşturuldu [ File Created ]'; // created message.
+  }
+}catch(exception $e){
+  echo $e->getMessage(); // error msg.
 }
-}catch( exception $e){
 
-echo $e->getMessage;
-}
